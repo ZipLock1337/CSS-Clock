@@ -1,0 +1,70 @@
+/* General style */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #e6e6e6;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Animate background gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* container */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Clock */
+
+.clock {
+    font-size: 42px;
+    transition: all 0.1s ease;
+    color: #fff;
+    text-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Deep shadow effect for text */
+.clock::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    filter: blur(15px);
+    z-index: -1;
+}
