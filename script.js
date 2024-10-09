@@ -1,10 +1,10 @@
 function clockTimer() {
-    const date = new Date();
-    const hour = string(now.getHours()).padStart(2, "0");
-    const minutes = string(now.getMinutes()).padStart(2, "0");
-    const seconds = string(now.getSeconds()).padStart(2, "0");
+    const now = new Date();
+    const hour = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const seconds = String(now.getSeconds()).padStart(2, "0");
 
-    const times = `${hours}:${minutes}:${seconds}`;
+    const times = `${hour}:${minutes}:${seconds}`;
     document.getElementById("clock").textContent = times;
 }
 
