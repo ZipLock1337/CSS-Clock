@@ -84,6 +84,12 @@ body {
     position: relative;
 }
 
+/* Animation effect */
+.clock.animate {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
 /* Deep shadow effect for text */
 .clock::after {
     content: '';
