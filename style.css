@@ -17,23 +17,51 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #e6e6e6;
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    background: linear-gradient(45deg, #ff9a9e, #fcb69f, #ff9966, #ff5e62, #3a1c71, #16a085, #f4d03f, #3498db);
     background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
+    animation: colorChange 30s ease infinite;
 }
 
-/* Animate background gradient */
-@keyframes gradientAnimation {
+/* Animate background gradient with different bright colors */
+@keyframes colorChange {
     0% {
         background-position: 0% 50%;
+        background-color: #ff9a9e;
     }
 
-    50% {
+    14% {
+        background-position: 50% 100%;
+        background-color: #fcb69f;
+    }
+
+    28% {
         background-position: 100% 50%;
+        background-color: #ff9966;
+    }
+
+    42% {
+        background-position: 50% 0%;
+        background-color: #ff5e62;
+    }
+
+    56% {
+        background-position: 0% 50%;
+        background-color: #3a1c71;
+    }
+
+    70% {
+        background-position: 50% 100%;
+        background-color: #16a085;
+    }
+
+    84% {
+        background-position: 100% 50%;
+        background-color: #f4d03f;
     }
 
     100% {
-        background-position: 0% 50%;
+        background-position: 50% 0%;
+        background-color: #3498db;
     }
 }
 
