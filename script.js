@@ -10,15 +10,13 @@ function clockTimer() {
     const clockElement = document.getElementById("clock");
     clockElement.textContent = times;
 
-    // Добавляем анимацию
     clockElement.classList.add("animate");
 
-    // Убираем класс анимации после завершения анимации
     setTimeout(() => {
         clockElement.classList.remove("animate");
-    }, 200); // 200 мс, чтобы соответствовать времени анимации
+    }, 200);
 }
 
-// Запускаем таймер каждую секунду
+// Start timer
 setInterval(clockTimer, 1000);
 clockTimer();
